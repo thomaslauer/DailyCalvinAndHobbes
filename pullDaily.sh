@@ -1,8 +1,17 @@
+#!/bin/bash
+
+export PATH=/usr/local/bin:$PATH
+
+WD="/Users/thomaslauer/Documents/GitHub/DailyCalvinAndHobbes"
+cd $WD
+
+if [[ ! -e "wallpapers" ]]; then
+    mkdir wallpapers
+fi
 
 rm -f wallpapers/*.png
 rm -f tmp.xml
 rm -f today.gif
-
 
 
 python gocomics-scrape.py calvinandhobbes > tmp.xml
