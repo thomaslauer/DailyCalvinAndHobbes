@@ -2,8 +2,11 @@
 
 export PATH=/usr/local/bin:$PATH
 
+
 WD="/Users/thomaslauer/Documents/GitHub/DailyCalvinAndHobbes"
 cd $WD
+
+date >> log.txt
 
 if [[ ! -e "wallpapers" ]]; then
     mkdir wallpapers
