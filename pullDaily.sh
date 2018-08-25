@@ -24,7 +24,7 @@ if [[ -e "last.xml" ]]; then
         wget $(python parseXml.py) -O today.gif
 
         if [[ $(date +%w) -eq 0 ]]; then
-            ffmpeg -i today.gif -vf scale=2.5*iw:2.5*ih $WALLPAPER_DIR/$(date +%s).png
+            ffmpeg -i today.gif -vf scale=2.25*iw:2.25*ih $WALLPAPER_DIR/$(date +%s).png
         else
             ffmpeg -i today.gif -vf scale=3*iw:3*ih $WALLPAPER_DIR/$(date +%s).png
         fi
@@ -33,7 +33,7 @@ else
     wget $(python parseXml.py) -O today.gif
 
     if [[ $(date +%w) -eq 0 ]]; then
-        ffmpeg -i today.gif -vf scale=2.5*iw:2.5*ih $WALLPAPER_DIR/$(date +%s).png
+        ffmpeg -i today.gif -vf scale=2.25*iw:2.25*ih $WALLPAPER_DIR/$(date +%s).png
     else
         ffmpeg -i today.gif -vf scale=3*iw:3*ih $WALLPAPER_DIR/$(date +%s).png
     fi
