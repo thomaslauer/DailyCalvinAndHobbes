@@ -2,6 +2,7 @@ wallpapers/*
 today.gif
 today.png
 tmp.xml
+last.xml
 .*.swp
 .DS_Store
 log.txt
